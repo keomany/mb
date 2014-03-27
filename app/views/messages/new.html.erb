@@ -1,0 +1,13 @@
+<%= form_for @message do |f| %>
+
+text: <%= f.text_field :text %><br />
+
+<%= @users.each do |user| %>
+<select>
+<option value="<%= user.id %> "><%= user.name %></option>
+<% end %>
+
+</select>
+
+<%= f.submit %>
+<% end %>
